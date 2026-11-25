@@ -18,7 +18,7 @@
     },
     "dependencies": {
         "alpinejs": "^3.17.5",
-        "apexcharts": "^8.8.1",
-        "cytoscape": "^3.34.4"
+        "apexcharts": "^8.8.2",
+        "cytoscape": "^3.35.0"
     }
 }

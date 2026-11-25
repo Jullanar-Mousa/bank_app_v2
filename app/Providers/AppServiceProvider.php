@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Mcp\Tools\GetAlertDetailsTool;
+use Laravel\Mcp\Facades\Mcp;
+use Laravel\Mcp\Server;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +22,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+      Mcp::local('banking', BankingServer::class);
     }
 }

@@ -17,8 +17,11 @@ use App\Http\Controllers\EngineSettingController;
 use App\Http\Controllers\AuditLogController;
 use App\Http\Controllers\ApiClientController;
 use App\Http\Controllers\MlModelController;
+use App\Mcp\Servers\FraudInvestigationServer;
+use Laravel\Mcp\Facades\Mcp;
 
 
+Mcp::web('/mcp/fraud-investigation', FraudInvestigationServer::class);
 
 Route::get('/', HomeController::class)->name('home');
 

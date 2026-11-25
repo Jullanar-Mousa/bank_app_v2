@@ -18,6 +18,11 @@ return Application::configure(basePath: dirname(__DIR__))
             'permission' => \App\Http\Middleware\EnsureHasPermission::class,
             'api.client' => \App\Http\Middleware\VerifyApiClientSecret::class,
         ]);
+
+        $middleware->validateCsrfTokens(except: [
+            'mcp/*',
+            '/mcp/*',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

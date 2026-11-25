@@ -173,5 +173,8 @@
             </div>
         </div>
     </div>
+    <livewire:ai-proposals-review />
+    <livewire:fraud-analytics-charts />
+    <livewire:fraud-network-graph />
 </div>
 @endsection
